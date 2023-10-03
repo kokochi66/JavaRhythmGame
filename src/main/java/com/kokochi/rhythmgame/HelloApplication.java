@@ -1,4 +1,4 @@
-package com.kokochi.javarhythmgame;
+package com.kokochi.rhythmgame;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

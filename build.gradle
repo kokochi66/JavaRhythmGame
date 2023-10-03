@@ -23,17 +23,16 @@ tasks.withType(JavaCompile) {
 }
 
 application {
-    mainModule = 'com.kokochi.javarhythmgame'
-    mainClass = 'com.kokochi.javarhythmgame.HelloApplication'
+    mainModule = 'com.kokochi.rhythmgame'
+    mainClass = 'com.kokochi.rhythmgame.GameApp'
 }
 
 javafx {
     version = '15.0.1'
-    modules = ['javafx.controls', 'javafx.fxml']
+    modules = ['javafx.controls', 'javafx.fxml', 'javafx.media']
 }
 
 dependencies {
-
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
 }

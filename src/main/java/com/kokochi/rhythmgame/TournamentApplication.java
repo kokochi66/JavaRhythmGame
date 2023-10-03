@@ -1,14 +1,12 @@
-package com.kokochi.javarhythmgame;
+package com.kokochi.rhythmgame;
 
-import com.kokochi.javarhythmgame.model.DataItem;
+
+import com.kokochi.rhythmgame.model.DataItem;
+import com.kokochi.rhythmgame.utils.UIUtils;
 import javafx.application.Application;
-import javafx.beans.binding.Bindings;
 import javafx.geometry.Pos;
-import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
 
@@ -53,8 +51,8 @@ public class TournamentApplication extends Application {
     }
 
     private void updateUI() {
-        StackPane leftImageStack = createImageStack(data.get(currentRound * 2).getImagePath());
-        StackPane rightImageStack = createImageStack(data.get(currentRound * 2 + 1).getImagePath());
+        StackPane leftImageStack = UIUtils.createMediaStack(data.get(currentRound * 2).getResourcePath());
+        StackPane rightImageStack = UIUtils.createMediaStack(data.get(currentRound * 2 + 1).getResourcePath());
 
         Label leftLabel = createOverlayLabel(data.get(currentRound * 2).getDescription());
         Label rightLabel = createOverlayLabel(data.get(currentRound * 2 + 1).getDescription());
@@ -95,23 +93,7 @@ public class TournamentApplication extends Application {
         leftPane.getChildren().add(winnerBox);
     }
 
-    private Node createImageContainer(String imagePath) {
-        Image image = new Image(imagePath);
-        ImageView imageView = new ImageView(image);
 
-        imageView.setFitWidth(800);
-        imageView.setFitHeight(850);
-        imageView.setPreserveRatio(true);
-
-        Pane imageContainer = new Pane(imageView);
-        imageContainer.setStyle("-fx-background-color: black;");
-        imageContainer.setMinSize(800, 850);
-
-        imageView.layoutXProperty().bind(Bindings.subtract(400, imageView.fitWidthProperty().divide(2)));
-        imageView.layoutYProperty().bind(Bindings.subtract(425, imageView.fitHeightProperty().divide(2)));
-
-        return imageContainer;
-    }
 
     private Label createOverlayLabel(String text) {
         Label label = new Label(text);
@@ -121,21 +103,6 @@ public class TournamentApplication extends Application {
         return label;
     }
 
-    private StackPane createImageStack(String imagePath) {
-        Image image = new Image(imagePath);
-        ImageView imageView = new ImageView(image);
-
-        imageView.setFitWidth(800);
-        imageView.setFitHeight(850);
-        imageView.setPreserveRatio(true);
-
-        StackPane stackPane = new StackPane();
-        stackPane.setStyle("-fx-background-color: black;");
-        stackPane.setPrefSize(800, 850);
-        stackPane.getChildren().add(imageView);
-
-        return stackPane;
-    }
 
 
     public static void main(String[] args) {

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<VBox fx:controller="com.kokochi.rhythmgame.controller.GameListController" xmlns:fx="http://javafx.com/fxml">
+    <Label text="게임 목록"/>
+    <!-- 게임 아이템 예시 -->
+    <HBox>
+        <ImageView />
+        <Label text="게임 제목"/>
+        <Button text="시작"/>
+        <Button text="저장"/>
+        <Button text="삭제"/>
+    </HBox>
+    <Button text="메인 페이지로 돌아가기" onAction="#loadMainPage"/>
+</VBox>

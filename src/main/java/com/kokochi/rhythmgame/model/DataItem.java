@@ -1,8 +1,8 @@
-package com.kokochi.javarhythmgame.model;
+package com.kokochi.rhythmgame.model;
 
 public class DataItem {
     private String name;
-    private String imagePath;
+    private String resourcePath;
     private String description;
 
     public String getName() {
@@ -13,12 +13,12 @@ public class DataItem {
         this.name = name;
     }
 
-    public String getImagePath() {
-        return imagePath;
+    public String getResourcePath() {
+        return resourcePath;
     }
 
-    public void setImagePath(String imagePath) {
-        this.imagePath = imagePath;
+    public void setResourcePath(String resourcePath) {
+        this.resourcePath = resourcePath;
     }
 
     public String getDescription() {
@@ -31,7 +31,7 @@ public class DataItem {
 
     public DataItem(String name, String imagePath, String description) {
         this.name = name;
-        this.imagePath = imagePath;
+        this.resourcePath = imagePath;
         this.description = description;
     }
 }
