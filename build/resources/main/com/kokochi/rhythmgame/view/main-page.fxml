@@ -5,7 +5,7 @@
 
 <VBox fx:controller="com.kokochi.rhythmgame.controller.MainController" xmlns:fx="http://javafx.com/fxml">
     <Label text="월드컵 게임"/>
-    <Button text="시작하기"/>
+    <Button text="시작하기" onAction="#loadGameListPage"/>
     <Button text="불러오기"/>
     <Button text="제작하기"/>
     <Button text="나가기"/>

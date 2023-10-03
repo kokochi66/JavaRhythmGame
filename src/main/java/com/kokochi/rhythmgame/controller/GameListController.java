@@ -10,7 +10,7 @@ public class GameListController {
 
     @FXML
     private void loadMainPage() throws Exception {
-        Parent mainPage = FXMLLoader.load(getClass().getResource("/com/kokochi/rhythmgame/view/game-list-page.fxml"));
+        Parent mainPage = FXMLLoader.load(getClass().getResource("/com/kokochi/rhythmgame/view/main-page.fxml"));
         Scene scene = new Scene(mainPage);
         Stage currentStage = (Stage) scene.getWindow();
         currentStage.setScene(scene);
